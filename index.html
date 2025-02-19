@@ -3,14 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>To-Do List</title>
+    <title>My Todo-List</title>
+    <link rel="icon" type="image/png" href="https://cdn-icons-png.flaticon.com/512/2387/2387635.png">
     <link rel="stylesheet" href="style.css">
+
+    
+    
 </head>
 <body>
     <div class="container">
         <h1>To-Do List</h1>
+        <button id="clearAll" onclick="clearTasks()">Clear All</button>
         <div class="todo-input">
-            <input type="text" id="taskInput" placeholder="Add a new task...">
+            <input type="text" id="taskInput" placeholder="Add a new task..." onkeypress="handleKeyPress(event)">
             <button onclick="addTask()">Add</button>
         </div>
         <ul id="taskList"></ul>
